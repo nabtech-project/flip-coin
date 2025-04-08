@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flip a coin online and customize the labels for heads and tails.">
+    <meta name="keywords" content="coin flip, coin, heads, tails, game, online coin flip">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Coin Flip Game">
+    <meta property="og:description" content="Flip a coin online and customize the labels for heads and tails.">
+    <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="coin-flip-container">
+        <h1>Coin Flip</h1>
+        <p>Customize the labels for the coin flip!</p>
+
+        <button id="customize-button" onclick="toggleCustomization()">Customize Labels</button>
+
+        <div id="customization-section" class="hidden" style="margin-top: 15px;">
+            <div>
+                <label for="heads-input">Heads Label: </label>
+                <input type="text" id="heads-input" value="Heads" />
+            </div>
+            <div style="margin-top: 10px;">
+                <label for="tails-input">Tails Label: </label>
+                <input type="text" id="tails-input" value="Tails" />
+            </div>
+        </div>
+
+        <div id="coin" class="coin">
+            <span id="coin-side">Heads</span>
+        </div>
+
+        <button id="flip-button" onclick="flipCoin()">Flip Coin</button>
+
+        <div id="congrats-message" class="hidden">Congrats! <span id="winner-side"></span> won!</div>
+
+        <div id="fireworks-container" class="hidden">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

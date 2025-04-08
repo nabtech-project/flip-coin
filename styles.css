@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('assets/45-degree-fabric-light.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.coin-flip-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+#coin {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffd700;
+    border: 5px solid #3b3305;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+#customization-section {
+    margin-top: 15px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+}
+
+#congrats-message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#congrats-message.hidden {
+    display: none;
+}
+
+#customization-section.hidden {
+    display: none;
+}
+
+#fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+}
+
+@keyframes cracker-sparkle {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.9);
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+        box-shadow: 0 0 15px 10px rgba(255, 223, 0, 0.6);
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+        box-shadow: 0 0 50px 25px rgba(255, 223, 0, 0);
+    }
+}
+
+.cracker {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    animation: cracker-sparkle 1s ease-out forwards;
+    opacity: 1;
+}
